@@ -8,33 +8,36 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
-public class Partner {
+public class OrderGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-
     private String status;
 
-    private String address;
+    private String orderType;
 
-    private String callCenter;
+    private String revAddress;
 
-    private String partnerNumber;
+    private String revName;
 
-    private String ceoName;
+    private String paymentType;
 
-    private LocalDateTime registeredAt;
+    private BigDecimal totalPrice;
 
-    private LocalDateTime unregisteredAt;
+    private Integer totalQuantity;
+
+    private LocalDateTime orderAt;
+
+    private LocalDateTime arrivalDate;
 
     private LocalDateTime createdAt;
 
