@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -29,7 +28,7 @@ public class Item {
 
     private String content;
 
-    private BigDecimal price;
+    private Integer price;
 
     private String brandName;
 
@@ -44,4 +43,6 @@ public class Item {
     private LocalDateTime updatedAt;
 
     private String updatedBy;
+
+    private Long partnerId;
 }
