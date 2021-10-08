@@ -79,5 +79,25 @@ BlockHound
 
 
 
+테스트
+
+@ExtendWith(~~.class): 테스트 핸들러를 지정할 수 있는 JUnit5의 api	
+@MockBean: Mockito를 사용해 가짜 객체를 만들고 빈으로 추가한다
+@BeforeEach: JUnit5의 애너테이션, 모든 테스트 메소드 실행 전에 테스트 준비를 위함
+StepVerifier::create: 리액터 타입 핸들러를 생성
+
+리액티브 코드를 테스트할 때 핵심은 기능만을 검사하는 게 아니라 리액티브 스트림 시그널도 함께 검사해야한다
+
+테스트 코드의 구독은 StepVeirifier가 한다
+
+
+
+스프링 부트 액추에이터
+서버 상태, ping, metrics를 확인 가능
+
+
+
+
+
 
 
