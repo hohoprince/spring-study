@@ -97,6 +97,55 @@ StepVerifier::create: 리액터 타입 핸들러를 생성
 
 
 
+테이블 키 생성 전략
+AUTO(default): jpa 구현체(스프링 부트에서 Hibernate)가 생성 방식을 결정
+IDENTITY: 사용하는 데이터베이스가 키 생성을 결정 MySQL이나 MariaDB의 경우 auto increment방식을 이용함
+SEQUENCE: 데이터베이스의 sequence를 이용해서 키를 생성. @SequenceGenerator와 같이 사용
+TABLE: 키 생성 전용 테이블을 생성해서 키 생성, @TableGenerator와 같이 사용
+
+
+
+JpaRepository 인터페이스
+Spring Data JPA의 구현체인 Hibernate를 이용하기위해 여러가지 API를 제공함
+그중에 개발자가 많이 사용하는 것이 JpaRepository
+상속 구조: Repository <= CrudRepository <= PagingAndSortRepository <= JpaRepository
+
+
+
+findById와 getOne의 차이
+findById는 실행한 순간에 SQL이 처리가 되고 getOne은 해당 객체가 필요한 순간에 SQL이 실행됨
+
+
+
+Pageable 인터페이스
+페이지 처리에 필요한 정보를 전달하는 용도의 타입
+인터페이스이기 때문에 실제 객체를 생성할 때는 구현체인 PageRequest를 이용
+PageRequest 클래스의 생성자는 protected로 선언되어 있어 new를 이용한 생성이 불가능해 of를 이용해 생성
+PageRequest클래스의 생성자의 인자로 page, size, sort가 있음
+
+of(int page, int size): 0부터 시작하는 페이지 번호와 개수(size), 정렬이 지정되지 않음
+of(int page, int size, Sort.Direction direction, String...props): 0부터 시작하는 페이지 번호와 개수, 정렬의 방향과 정렬 기준 필드들
+of(int page, int size, Sort sort): 페이지 번호와 개수, 정렬 관정 정보
+
+
+
+Querydsl
+JPA의 쿼리 메서드와 @Query는 선언할 때 고정된 형태의 값을 가진다는 단점이 존재
+따라서 복잡한 조합을 이용하는 경우의 수가 많아지는 상황에서 동적으로 쿼리를 생성해 처리하는 기능이 필요함
+Querydsl은 이러한 상황을 처리할 수 있는 기술
+
+엔티티 클래스를 그대로 이용하는 것이 아닌 Q도메인을 이용해야함
+Querydsl 설정을 마치고 compileQuerydsl을 실행하면 build폴더에 Q로 시작하는 엔티티 클래스가 생성됨
+Repository에는 QuerydslPredicateExecutor 인터페이스를 상속받게 됨
+Q도메인을 이용해 BooleanExpression을 만들고 BooleanBuider에 and나 or같은 키워드로 결합
+find의 인자로 builder를 넘겨줌으로 검색 가능
+
+
+
+지연 로딩
+join의 경우 많은 연산이 필요하므로 필요할때 연산을 처리하도록 지연 로딩 처리
+@ManyToOne(fetch = FetchType.LAZY)
+
 
 
 
