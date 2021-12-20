@@ -1094,6 +1094,7 @@ groups \'b1\'e2\'b4\'c9\'c0\'ba \'bd\'c7\'c1\'a6\'b7\'ce \'c0\'df \'bb\'e7\'bf\'
 @RequestBody\'b4\'c2 Json \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'b4\'c3\'bc\'b7\'ce \'ba\'af\'b0\'e6\'c7\'cf\'c1\'f6 \'b8\'f8 \'c7\'cf\'b8\'e9 \'c0\'cc\'c8\'c4 \'b4\'dc\'b0\'e8\'b0\'a1 \'c1\'f8\'c7\'e0\'b5\'c7\'c1\'f6 \'be\'ca\'b0\'ed @ModelAttribute\'b4\'c2 \'c7\'ca\'b5\'e5 \'b4\'dc\'c0\'a7\'b7\'ce \'c0\'fb\'bf\'eb\'b5\'c7\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'bf\'c0\'b7\'f9\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'ba \'c7\'ca\'b5\'e5\'bf\'a1 \'b4\'eb\'c7\'d8\'bc\'ad \'b0\'cb\'c1\'f5\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
 \
 \
+\
 
 \f0\b \'b7\'ce\'b1\'d7\'c0\'ce\
 \
@@ -1112,7 +1113,17 @@ groups \'b1\'e2\'b4\'c9\'c0\'ba \'bd\'c7\'c1\'a6\'b7\'ce \'c0\'df \'bb\'e7\'bf\'
 \
 HttpServletRequest, HttpServletResponse\'b4\'c2 \'c5\'d7\'bd\'ba\'c6\'ae\'bd\'c3 MockHttpServletRequest, MockHttpServletResponse\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9.\
 \
+\'bd\'ba\'c7\'c1\'b8\'b5\'bf\'a1\'bc\'ad HttpSession\'c0\'bb \'c1\'f6\'bf\'f8\'c7\'cf\'b9\'c7\'b7\'ce \'c1\'f7\'c1\'a2 \'b1\'b8\'c7\'f6\'c7\'d2 \'c7\'ca\'bf\'e4\'b4\'c2 \'be\'f8\'b4\'d9.\
+@SessionAttribute\'b8\'a6 \'c6\'c4\'b6\'f3\'b9\'cc\'c5\'cd\'bf\'a1 \'bc\'b1\'be\'f0\'c7\'cf\'b8\'e9 \'bc\'bc\'bc\'c7 \'b0\'aa\'bf\'a1 \'b8\'c2\'b4\'c2 \'b0\'b4\'c3\'bc\'b8\'a6 \'b8\'c5\'c7\'ce\'bd\'c3\'c4\'d1\'c1\'dc\
+\
+\'c3\'ca\'b1\'e2 \'b7\'ce\'b1\'d7\'c0\'ce\'bd\'c3 url\'bf\'a1 \'bc\'bc\'bc\'c7\'bf\'a1 \'b0\'fc\'c7\'d1 \'c1\'a4\'ba\'b8\'b0\'a1 \'c6\'f7\'c7\'d4\'b5\'c7\'b4\'c2\'b5\'a5 \'c0\'cc\'b4\'c2 \'c4\'ed\'c5\'b0\'b8\'a6 \'c1\'f6\'bf\'f8\'c7\'cf\'c1\'f6 \'be\'ca\'b4\'c2 \'ba\'ea\'b6\'f3\'bf\'ec\'c0\'fa\'bf\'a1\'bc\'ad url\'c0\'bb \'c5\'eb\'c7\'d8 \'bc\'bc\'bc\'c7\'c0\'bb \'c0\'af\'c1\'f6\'c7\'d2\'b6\'a7 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9. \'c4\'ed\'c5\'b0\'b8\'a6 \'c1\'f6\'bf\'f8\'c7\'d1\'b4\'d9\'b8\'e9 \'c4\'ed\'c5\'b0\'bf\'cd url \'b8\'f0\'b5\'ce \'c1\'a4\'ba\'b8\'b0\'a1 \'c7\'a5\'b1\'e2\'b5\'ca\
+\'c4\'ed\'c5\'b0\'b8\'a6 \'c5\'eb\'c7\'d8\'bc\'ad\'b8\'b8 \'bc\'bc\'bc\'c7\'c0\'bb \'c0\'af\'c1\'f6\'c7\'cf\'b0\'ed \'bd\'cd\'b4\'d9\'b8\'e9 application.properties\'bf\'a1 \'b4\'d9\'c0\'bd\'c0\'bb \'c3\'df\'b0\'a1\
+server.servlet.session.tracking-modes=cookie\
 \
 
+\f0\b \'bc\'bc\'bc\'c7\'c0\'c7 \'c0\'af\'c1\'f6\'bd\'c3\'b0\'a3 \'bc\'b3\'c1\'a4 \'b9\'e6\'b9\'fd
+\f3\b0 \
+\'b1\'db\'b7\'ce\'b9\'fa \'bc\'b3\'c1\'a4: application.properties\'bf\'a1 server.servlet.session.timeout=60 (60\'c3\'ca)\
+\'c6\'af\'c1\'a4 \'bc\'bc\'bc\'c7 \'b4\'dc\'c0\'a7\'b7\'ce \'bd\'c3\'b0\'a3 \'bc\'b3\'c1\'a4: session.setMaxInactiveInterval(1800) (1800\'c3\'ca)
 \f2 \
 }

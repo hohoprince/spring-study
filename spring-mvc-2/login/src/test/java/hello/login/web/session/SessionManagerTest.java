@@ -16,12 +16,12 @@ class SessionManagerTest {
 
     @Test
     void sessionTest() {
-        // 세션 생성 / 클라 -> 서버
+        // 세션 생성
         MockHttpServletResponse response = new MockHttpServletResponse();
         Member member = new Member();
         sessionManager.createSession(member, response);
 
-        // 요청에 응답 쿠키 / 저장 서버 -> 클라
+        // 요청에 응답 쿠키
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.setCookies(response.getCookies());
 
