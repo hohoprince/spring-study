@@ -32,7 +32,7 @@ public class ExControllerAdvice {
 
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler
-    public ErrorResult exHandler(Exception e) { // 처리하지 못한 클래스는 모든 Exception 클래스의 부모인 Exception이 처리
+    public ErrorResult exHandler(Exception e) { // 처리하지 못한 클래스는 모든 Exception 클래스들의 부모인 Exception이 처리
         log.error("[exceptionHandler] ex", e);
         return new ErrorResult("EX", "내부 오류");
     }
