@@ -1,0 +1,22 @@
+package hello.proxy.cglib;
+
+import hello.proxy.cglib.code.TimeMethodInterceptor;
+import hello.proxy.common.service.ConcreteService;
+import org.junit.jupiter.api.Test;
+import org.springframework.cglib.proxy.Enhancer;
+
+public class CglibTest {
+
+    @Test
+    void cglib() {
+        ConcreteService target = new ConcreteService();
+
+        Enhancer enhancer = new Enhancer();
+        enhancer.setSuperclass(ConcreteService.class);
+        enhancer.setCallback(new TimeMethodInterceptor(target));
+
+        ConcreteService proxy = (ConcreteService) enhancer.create();
+
+        proxy.call();
+    }
+}
