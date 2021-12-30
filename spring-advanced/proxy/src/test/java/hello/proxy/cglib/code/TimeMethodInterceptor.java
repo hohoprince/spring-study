@@ -21,7 +21,6 @@ public class TimeMethodInterceptor implements MethodInterceptor {
         long startTime = System.currentTimeMillis();
 
         Object result = methodProxy.invoke(target, objects);
-//        Object result = method.invoke(target, objects);
 
         long endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
