@@ -1908,5 +1908,15 @@ ex) \'a1\'aeexecution(* hello.proxy.app..*(..))\'a1\'af\
 && \'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d8 \'bf\'a9\'b7\'af \'c7\'a5\'c7\'f6\'c0\'bb \'c1\'b6\'c7\'d5\'c7\'d2 \'bc\'f6 \'c0\'d6\'b0\'ed, ! \'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d8 \'ba\'ce\'c1\'a4\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
 \
 \
+
+\f0\b @AspectAop
+\f3\b0 \
+@Aspect \'be\'d6\'b3\'ca\'c5\'d7\'c0\'cc\'bc\'c7\'c0\'b8\'b7\'ce \'b8\'c5\'bf\'ec \'c6\'ed\'b8\'ae\'c7\'cf\'b0\'d4 pointcut, advice\'b7\'ce \'b1\'b8\'bc\'ba\'b5\'c8 advisor\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b4\'c2 \'b1\'e2\'b4\'c9\'c0\'bb \'c1\'f6\'bf\'f8\'c7\'d1\'b4\'d9.\
+AnnotationAwareAspectJAutoProxyCreator\'b4\'c2 @Aspect\'b0\'a1 \'c3\'df\'b0\'a1\'b5\'c8 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'c3\'a3\'be\'c6 advisor\'b7\'ce \'ba\'af\'c8\'af\'c7\'d8\'bc\'ad \'b5\'ee\'b7\'cf\'c7\'d1\'b4\'d9.\
 \
-}
+@Aspect\'b0\'a1 \'c3\'df\'b0\'a1\'b5\'c8 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b8\'de\'bc\'ad\'b5\'e5\'b7\'ce pointcut\'b0\'fa advice\'b8\'a6 \'c7\'d1\'b9\'f8\'bf\'a1 \'b1\'b8\'bc\'ba\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+ex)\
+@Around(\'a1\'b0execution(* hello.proxy.app..*(..))\'a1\'b1) -> pointcut\
+public Object execute(proceedingJoinPoint joinpoint) throwsThrowable \{\
+	// advice\
+\}}
