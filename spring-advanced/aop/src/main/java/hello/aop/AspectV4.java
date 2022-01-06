@@ -1,4 +1,4 @@
-package hello.aop.order.aop;
+package hello.aop;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -8,24 +8,16 @@ import org.aspectj.lang.annotation.Pointcut;
 
 @Slf4j
 @Aspect
-public class AspectV3 {
+public class AspectV4 {
 
-    // hello.aop.order 하위 패키지 대상
-    @Pointcut("execution(* hello.aop.order..*(..))")
-    private void allOrder() {}
-
-    // 클래스 이름 패턴이 *Service
-    @Pointcut("execution(* *..*Service.*(..))")
-    public void allService() {}
-
-    @Around("allOrder()")
+    @Around("hello.aop.Pointcuts.allOrder()")
     public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
         log.info("[log] {}", joinPoint.getSignature());
         return joinPoint.proceed();
     }
 
     // hello.aop.order 패키지와 하위 패키지 이면서 클래스 이름 패턴이 *Service
-    @Around("allOrder() && allService()")
+    @Around("hello.aop.Pointcuts.orderAndService()")
     public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
         try {
             log.info("[트랜잭션 시작] {}", joinPoint.getSignature());
