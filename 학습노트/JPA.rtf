@@ -2,15 +2,14 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Bold;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww15360\viewh12800\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww15360\viewh14540\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\b\fs28 \cf0 JPA\
 
 \f1\b0 \
 JPA\'b4\'c2 \'b0\'b0\'c0\'ba \'c6\'ae\'b7\'a3\'c0\'e8\'bc\'c7\'c0\'cf \'b6\'a7 \'b0\'b0\'c0\'ba \'b0\'b4\'c3\'bc\'b0\'a1 \'c1\'b6\'c8\'b8\'b5\'c7\'b4\'c2 \'b0\'cd\'c0\'bb \'ba\'b8\'c0\'e5\'c7\'d1\'b4\'d9.\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 JPA\'b4\'c2 JDBC API\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+JPA\'b4\'c2 JDBC API\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
 \
 JPA\'b4\'c2 \'c0\'da\'b9\'d9 ORM \'b1\'e2\'bc\'fa\'bf\'a1 \'b4\'eb\'c7\'d1 API \'c7\'a5\'c1\'d8 \'b8\'ed\'bc\'bc. \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b5\'e9\'c0\'bb \'b8\'f0\'be\'c6\'b5\'d0 \'b0\'cd.\
 
@@ -39,7 +38,6 @@ JPA\'b0\'a1 \'c1\'a6\'b0\'f8\'c7\'cf\'c1\'f6 \'be\'ca\'b4\'c2 \'c6\'af\'c1\'a4 \
 H2: org.hibername.dialect.H2Dialect\
 Oracle: org.hibernate.dialect.Oravle10gDialect\
 MySQL: org.hibernate.dialect.MySQL5InnoDBDialect\
-\
 \
 \
 
@@ -87,4 +85,74 @@ name: \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'c7 \'c4\'c3\'b7\'b3 \'b8\'ed\'c0\'bb \'c0\'d
 \
 \
 \
+
+\f0\b EntityManagerFactory\'bf\'cd EntityManager\
+\
+EntityManagerFactory\
+
+\f1\b0 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'b8\'a6 \'c7\'cf\'b3\'aa\'b8\'b8 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'be\'d6\'c7\'c3\'b8\'ae\'c4\'c9\'c0\'cc\'bc\'c7\'c0\'ba \'c0\'cf\'b9\'dd\'c0\'fb\'c0\'b8\'b7\'ce 	EntityManagerFactory\'b8\'a6 \'c7\'cf\'b3\'aa\'b8\'b8 \'bb\'fd\'bc\'ba\'c7\'d1\'b4\'d9.\
+\
+EntityManagerFactory emf = Persistence.createEntityManagerFactory(\'a1\'b0jpabook\'a1\'b1);\
+\
+\'a1\'b0jpabook\'a1\'b1\'c0\'ba META-INF/persistence.xml\'c0\'c7 \'c1\'a4\'ba\'b8\
+
+\f0\b \'c0\'cc \'b0\'fa\'c1\'a4\'c0\'ba \'ba\'f1\'bf\'eb\'c0\'cc \'be\'c6\'c1\'d6 \'b8\'b9\'c0\'cc \'b5\'e7\'b4\'d9.
+\f1\b0 \
+\
+
+\f0\b EntityManager\
+
+\f1\b0 EntityManagerFactory\'bf\'a1\'bc\'ad EntityManager\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+
+\f0\b \'c0\'cc \'b0\'fa\'c1\'a4\'c0\'ba \'ba\'f1\'bf\'eb\'c0\'cc \'b0\'c5\'c0\'c7 \'b5\'e9\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9.\
+\
+
+\f1\b0 EntityManager em = emf.createEntityManager();\
+\
+
+\f0\b \'bf\'a3\'c6\'bc\'c6\'bc \'b8\'c5\'b4\'cf\'c0\'fa \'c6\'d1\'c5\'e4\'b8\'ae\'b4\'c2 \'bf\'a9\'b7\'af \'bd\'ba\'b7\'b9\'b5\'e5\'b0\'a1 \'b5\'bf\'bd\'c3\'bf\'a1 \'c1\'a2\'b1\'d9\'c7\'d8\'b5\'b5 \'be\'c8\'c0\'fc\'c7\'cf\'b9\'c7\'b7\'ce \'bc\'ad\'b7\'ce \'b4\'d9\'b8\'a5 \'bd\'ba\'b7\'b9\'b5\'e5 \'b0\'a3\'bf\'a1 \'b0\'f8\'c0\'af\'c7\'d8\'b5\'b5 \'b5\'c7\'c1\'f6\'b8\'b8\
+\'bf\'a3\'c6\'bc\'c6\'bc \'b8\'c5\'b4\'cf\'c0\'fa\'b4\'c2 \'bf\'a9\'b7\'af \'bd\'ba\'b7\'b9\'b5\'e5\'b0\'a1 \'b5\'bf\'bd\'c3\'bf\'a1 \'c1\'a2\'b1\'d9\'c7\'cf\'b8\'e9 \'b5\'bf\'bd\'c3\'bc\'ba \'b9\'ae\'c1\'a6\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'cf\'b9\'c7\'b7\'ce \'bd\'ba\'b7\'b9\'b5\'e5 \'b0\'a3\'bf\'a1 \'c0\'fd\'b4\'eb \'b0\'f8\'c0\'af\'c7\'cf\'b8\'e9 \'be\'c8\'b5\'c8\'b4\'d9.
+\f1\b0 \
+\
+\
+\
+
+\f0\b \'bf\'a3\'c6\'bc\'c6\'bc\'c0\'c7 \'bb\'fd\'b8\'ed\'c1\'d6\'b1\'e2
+\f1\b0 \
+\'bf\'a3\'c6\'bc\'c6\'bc\'b4\'c2 4\'b0\'a1\'c1\'f6 \'bb\'f3\'c5\'c2\'b0\'a1 \'c1\'b8\'c0\'e7\'c7\'d1\'b4\'d9.\
+- \'ba\'f1\'bf\'b5\'bc\'d3: \'bf\'b5\'bc\'d3\'bc\'ba \'c4\'c1\'c5\'d8\'bd\'ba\'c6\'ae\'bf\'cd \'c0\'fc\'c7\'f4 \'b0\'fc\'b0\'e8\'b0\'a1 \'be\'f8\'b4\'c2 \'bb\'f3\'c5\'c2\
+- \'bf\'b5\'bc\'d3: \'bf\'b5\'bc\'d3\'bc\'ba \'c4\'c1\'c5\'d8\'bd\'ba\'c6\'ae\'bf\'a1 \'c0\'fa\'c0\'e5\'b5\'c8 \'bb\'f3\'c5\'c2\
+- \'c1\'d8\'bf\'b5\'bc\'d3: \'bf\'b5\'bc\'d3\'bc\'ba \'c4\'c1\'c5\'d8\'bd\'ba\'c6\'ae\'bf\'a1 \'c0\'fa\'c0\'e5\'b5\'c7\'be\'fa\'b4\'d9\'b0\'a1 \'ba\'d0\'b8\'ae\'b5\'c8 \'bb\'f3\'c5\'c2\
+- \'bb\'e8\'c1\'a6: \'bb\'e8\'c1\'a6\'b5\'c8 \'bb\'f3\'c5\'c2\
+\'ba\'f1\'bf\'b5\'bc\'d3 / \'c1\'d8\'bf\'b5\'bc\'d3 -> \'bf\'b5\'bc\'d3\'c0\'c7 \'b9\'e6\'b9\'fd\'c0\'ba merge\'b8\'a6 \'c0\'cc\'bf\'eb\
+\
+\
+jpa\'c0\'c7 \'bc\'f6\'c1\'a4\'c0\'ba \'b8\'f0\'b5\'e7 \'c7\'ca\'b5\'e5\'b8\'a6 \'bc\'f6\'c1\'a4\'c7\'cf\'b4\'c2 \'c4\'f5\'b8\'ae\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'d4 \'b5\'c7\'b4\'c2\'b5\'a5 \'bc\'f6\'c1\'a4\'b5\'c8 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'b8 \'bb\'e7\'bf\'eb\'c7\'d8\'bc\'ad \'b5\'bf\'c0\'fb\'c0\'b8\'b7\'ce sql\'c0\'bb \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed\'bd\'cd\'b4\'d9\'b8\'e9\
+\'c7\'cf\'c0\'cc\'b9\'f6\'b3\'d7\'c0\'cc\'c6\'ae\'c0\'c7 \'b1\'e2\'b4\'c9\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9.\
+\'bf\'a3\'c6\'bc\'c6\'bc \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1 @org.hibernate.annotations.DynamicUpdate\'b8\'a6 \'c0\'fb\'bf\'eb\
+\'b5\'a5\'c0\'cc\'c5\'cd\'b0\'a1 \'c1\'b8\'c0\'e7\'c7\'cf\'b4\'c2 \'c7\'ca\'b5\'e5\'b8\'b8 \'bb\'e7\'bf\'eb\'c7\'d8\'bc\'ad insert \'c4\'f5\'b8\'ae\'b8\'a6 \'b8\'b8\'b5\'e9\'b0\'ed \'bd\'cd\'b4\'d9\'b8\'e9\
+@DynamicInsert\'b8\'a6 \'c0\'fb\'bf\'eb\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9.\
+\
+\
+
+\f0\b Flush\
+
+\f1\b0 flush\'b4\'c2 \'bf\'b5\'bc\'d3\'bc\'ba \'c4\'c1\'c5\'d8\'bd\'ba\'c6\'ae\'c0\'c7 \'ba\'af\'b0\'e6 \'b3\'bb\'bf\'eb\'c0\'bb \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'b9\'dd\'bf\'b5\'c7\'d1\'b4\'d9.\
+
+\f0\b \
+
+\f1\b0 flush\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'cf\'b4\'c2 \'b9\'e6\'b9\'fd\
+- em.flush() \'c1\'f7\'c1\'a2 \'c8\'a3\'c3\'e2\
+- \'c6\'ae\'b7\'a3\'c0\'e8\'bc\'c7 \'c4\'bf\'b9\'d4\'bd\'c3 \'c0\'da\'b5\'bf \'c8\'a3\'c3\'e2\
+- JPQL \'c4\'f5\'b8\'ae \'bd\'c7\'c7\'e0\'bd\'c3 \'c0\'da\'b5\'bf \'c8\'a3\'c3\'e2\
+\
+\'c6\'ae\'b7\'a3\'c0\'e8\'bc\'c7 \'c4\'bf\'b9\'d4\'bd\'c3 flush\'b0\'a1 \'c8\'a3\'c3\'e2\'b5\'c7\'be\'ee\'c0\'d6\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'be\'c6\'b9\'ab \'c0\'db\'be\'f7\'b5\'b5 \'c7\'cf\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9. \'c0\'cc\'b0\'cd\'c0\'bb \'bf\'b9\'b9\'e6\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8 \'c4\'bf\'b9\'d4\'bd\'c3 \'c0\'da\'b5\'bf\'c0\'b8\'b7\'ce flush\'b0\'a1 \'c8\'a3\'c3\'e2\'b5\'c8\'b4\'d9.\
+JPQL\'c0\'ba \'c4\'f5\'b8\'ae\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d8\'bc\'ad \'bd\'c7\'c7\'e0\'bd\'c3\'c5\'b0\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'bf\'b5\'bc\'d3\'bc\'ba \'c4\'c1\'c5\'d8\'bd\'ba\'c6\'ae\'bf\'a1 \'c0\'d6\'c1\'f6\'b8\'b8 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'be\'f8\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c8\'b0\'bf\'eb\'c7\'cf\'c1\'f6 \'b8\'f8 \'c7\'d1\'b4\'d9.\
+\'b5\'fb\'b6\'f3\'bc\'ad JPA\'b4\'c2 JPQL \'c4\'f5\'b8\'ae\'b0\'a1 \'bd\'c7\'c7\'e0\'b5\'c7\'b1\'e2 \'c0\'fc\'bf\'a1 flush\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'d1\'b4\'d9.\
+\
+\'c7\'c3\'b7\'af\'bd\'c3 \'b8\'f0\'b5\'e5 \'bf\'c9\'bc\'c7\
+- FlushModeType.AUTO: \'c4\'bf\'b9\'d4\'c0\'cc\'b3\'aa \'c4\'f5\'b8\'ae\'b8\'a6 \'bd\'c7\'c7\'e0\'c7\'d2 \'b6\'a7 \'c7\'c3\'b7\'af\'bd\'c3 (default)\
+- FlushModeType.COMMIT: \'c4\'bf\'b9\'d4\'c7\'d2 \'b6\'a7\'b8\'b8 \'c7\'c3\'b7\'af\'bd\'c3\
+\
+em.setFlushMode(FlushModeType.COMMIT);\
 }
