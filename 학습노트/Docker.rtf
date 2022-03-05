@@ -4,7 +4,7 @@
 {\*\expandedcolortbl;;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww15360\viewh9040\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww15360\viewh12200\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\b\fs28 \cf0 \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'ba\'d0\'b8\'ae\
@@ -43,6 +43,11 @@ C-group\'b0\'fa \'b3\'d7\'c0\'d3\'bd\'ba\'c6\'e4\'c0\'cc\'bd\'ba\'b4\'c2 \'b8\'a
 \f1\b0 \
 - \'c0\'cc\'b9\'cc\'c1\'f6\'b7\'ce \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'bb\'fd\'bc\'ba \'b9\'d7 \'bd\'c7\'c7\'e0\
 - command\'b8\'a6 \'bb\'fd\'b7\'ab\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'bd\'c3\'c0\'db \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'b9\'ab\'bd\'c3\'c7\'cf\'b0\'ed \'c0\'cc \'b8\'ed\'b7\'c9\'c0\'cc \'bd\'c7\'c7\'e0\'b5\'ca ex) ls\
+- \'c6\'f7\'c6\'ae \'b8\'ca\'c7\'ce\
+	docker run -p 49160:8080 <\'c0\'cc\'b9\'cc\'c1\'f6\'c0\'cc\'b8\'a7>\
+	49160\'c6\'f7\'c6\'ae\'b7\'ce \'c1\'a2\'bc\'d3\'c7\'cf\'b8\'e9 \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'b3\'bb\'bf\'a1\'bc\'ad 8080\'c0\'b8\'b7\'ce\
+- d\'bf\'c9\'bc\'c7\'c0\'ba \'c5\'cd\'b9\'cc\'b3\'ce\'bf\'a1\'bc\'ad \'ba\'fc\'c1\'ae\'b3\'aa\'bf\'c0\'b0\'d4 \'b5\'ca\
+	\
 \
 \pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
 \ls1\ilvl0
@@ -111,5 +116,115 @@ C-group\'b0\'fa \'b3\'d7\'c0\'d3\'bd\'ba\'c6\'e4\'c0\'cc\'bd\'ba\'b4\'c2 \'b8\'a
 \f1\b0 - \'bd\'c7\'c7\'e0\'c1\'df\'c0\'ce \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'bf\'a1 \'b8\'ed\'b7\'c9\'be\'ee \'c0\'fc\'b4\'de\
 - run\'c0\'ba \'bb\'f5\'b7\'ce \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d8 \'bd\'c7\'c7\'e0\'c7\'cf\'b0\'ed exec\'b4\'c2 \'bd\'c7\'c7\'e0\'c1\'df\'c0\'ce \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'bf\'a1 \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'c0\'fc\'b4\'de\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc\'b4\'d9.\
 - ex) docker exec 11f3f31f ls => ls \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 ID\'b0\'a1 11f3f31f\'c0\'ce \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'bf\'a1\'bc\'ad \'bd\'c7\'c7\'e0\
+- it \'bf\'c9\'bc\'c7\'c0\'bb \'ba\'d9\'bf\'a9\'c1\'d6\'b8\'e9 \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'bd\'c7\'c7\'e0 \'c8\'c4 \'b0\'e8\'bc\'d3\'c7\'d8\'bc\'ad \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'c0\'fb\'c0\'bb \'bc\'f6 \'c0\'d6\'b4\'d9.\
+- i \'bf\'c9\'bc\'c7\'c0\'ba interactive / t \'bf\'c9\'bc\'c7\'c0\'ba terminal\
+- ex) docker exec -it 1k23kj\'a1\'a6 redis-cli / redis \'c5\'ac\'b6\'f3\'c0\'cc\'be\'f0\'c6\'ae\'b8\'a6 \'bd\'c7\'c7\'e0\'c7\'d1\'b4\'d9 \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b4\'c2 redis \'bc\'ad\'b9\'f6\'b8\'a6 \'bd\'c7\'c7\'e0\'c7\'d1\'b4\'d9.\
+	it \'bf\'c9\'bc\'c7\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 redis-cli\'b8\'a6 \'bd\'c7\'c7\'e0\'b8\'b8\'c7\'d1\'b4\'d9.\
+- it\'bf\'c9\'bc\'c7\'bf\'a1\'b4\'d9\'b0\'a1 \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 sh, bash, zsh \'b5\'ee \'c0\'d4\'b7\'c2\'c7\'cf\'b8\'e9 \'bd\'c7\'c7\'e0\'c1\'df\'c0\'ce \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'bf\'a1 \'bd\'a9 \'c8\'af\'b0\'e6\'c0\'b8\'b7\'ce \'c1\'a2\'bc\'d3\'c7\'d1\'b4\'d9 / \'c1\'be\'b7\'e1\'b4\'c2 control + D\
 \
+
+\f0\b docker build <\'b5\'b5\'c4\'bf \'c6\'c4\'c0\'cf>\
+
+\f1\b0 - \'b5\'b5\'c4\'bf \'c6\'c4\'c0\'cf\'c0\'bb \'c0\'cc\'bf\'eb\'c7\'d8 \'c0\'cc\'b9\'cc\'c1\'f6 \'bb\'fd\'bc\'ba\
+- t\'bf\'c9\'bc\'c7\'c0\'bb \'c1\'d6\'b8\'e9 \'c0\'cc\'b9\'cc\'c1\'f6\'bf\'a1 \'c0\'cc\'b8\'a7\'c0\'bb \'ba\'ce\'bf\'a9\'c7\'d2 \'bc\'f6 \'c0\'d6\'c0\'bd\
+	docker build -t <\'b3\'aa\'c0\'c7 \'b5\'b5\'c4\'bf \'be\'c6\'c0\'cc\'b5\'f0> / <\'c0\'fa\'c0\'e5\'bc\'d2/\'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae \'c0\'cc\'b8\'a7> : <\'b9\'f6\'c0\'fc> <\'b5\'b5\'c4\'bf \'c6\'c4\'c0\'cf \'c0\'cc\'b8\'a7>\
+	ex) docker build -t hohoprince/hello:latest .\
+
+\f0\b \
+docker image ls\
+
+\f1\b0 - \'b5\'b5\'c4\'bf \'c0\'cc\'b9\'cc\'c1\'f6 \'c1\'b6\'c8\'b8
+\f0\b \
+\
+docker image rm\
+
+\f1\b0 - \'b5\'b5\'c4\'bf \'c0\'cc\'b9\'cc\'c1\'f6 \'bb\'e8\'c1\'a6
+\f0\b \
+\
+docker volume create <volume name>\
+
+\f1\b0 - \'b5\'b5\'c4\'bf \'ba\'bc\'b7\'fd \'bb\'fd\'bc\'ba
+\f0\b \
+\
+docker volume ls
+\f1\b0 \
+- \'b5\'b5\'c4\'bf \'ba\'bc\'b7\'fd \'c1\'b6\'c8\'b8\
+\
+
+\f0\b docker volume rm <volume name>\
+
+\f1\b0 - \'ba\'bc\'b7\'fd \'bb\'e8\'c1\'a6\
+\
+\
+\
+\
+
+\f0\b \'b5\'b5\'c4\'bf \'c0\'cc\'b9\'cc\'c1\'f6 \'bb\'fd\'bc\'ba\
+\
+\'b5\'b5\'c4\'bf \'c0\'cc\'b9\'cc\'c1\'f6 \'bb\'fd\'bc\'ba\'c7\'cf\'b4\'c2 \'bc\'f8\'bc\'ad\
+
+\f1\b0 Dockerfile \'c0\'db\'bc\'ba -> \'b5\'b5\'c4\'bf \'c5\'ac\'b6\'f3\'c0\'cc\'be\'f0\'c6\'ae -> \'b5\'b5\'c4\'bf \'bc\'ad\'b9\'f6 -> \'c0\'cc\'b9\'cc\'c1\'f6 \'bb\'fd\'bc\'ba\
+\
+\
+Dockerfile \'c0\'db\'bc\'ba
+\f0\b \
+
+\f1\b0  - Docker File\'c0\'ba Docker Image\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d1 \'bc\'b3\'c1\'a4 \'c6\'c4\'c0\'cf.\
+ - \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b0\'a1 \'be\'ee\'b6\'bb\'b0\'d4 \'c7\'e0\'b5\'bf\'c7\'d8\'be\'df \'c7\'cf\'b4\'c2\'c1\'f6 \'bc\'b3\'c1\'a4\'c0\'bb \'c1\'a4\'c0\'c7\
+\
+Dockerfile \'b8\'b8\'b5\'e5\'b4\'c2 \'bc\'f8\'bc\'ad\
+\'ba\'a3\'c0\'cc\'bd\'ba \'c0\'cc\'b9\'cc\'c1\'f6 \'b8\'ed\'bd\'c3 (\'c6\'c4\'c0\'cf \'bd\'ba\'b3\'c0\'bc\'a6\'bf\'a1 \'c7\'d8\'b4\'e7) -> \'c3\'df\'b0\'a1\'c0\'fb\'c0\'b8\'b7\'ce \'c7\'ca\'bf\'e4\'c7\'d1 \'c6\'c4\'c0\'cf\'c0\'bb \'b4\'d9\'bf\'ee\'b9\'de\'b1\'e2 \'c0\'a7\'c7\'d1 \'b8\'ee\'b0\'a1\'c1\'f6 \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'b8\'ed\'bd\'c3 (\'c6\'c4\'c0\'cf \'bd\'ba\'b3\'c0\'bc\'a6\'bf\'a1 \'c7\'d8\'b4\'e7)\
+-> \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'bd\'c3\'c0\'db\'bd\'c3 \'bd\'c7\'c7\'e0\'b5\'c9 \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'b8\'ed\'bd\'c3 (\'bd\'c3\'c0\'db\'bd\'c3 \'bd\'c7\'c7\'e0\'b5\'c9 \'b8\'ed\'b7\'c9\'be\'ee\'bf\'a1 \'c7\'d8\'b4\'e7)\
+\
+\'ba\'a3\'c0\'cc\'bd\'ba \'c0\'cc\'b9\'cc\'c1\'f6\
+ - \'b5\'b5\'c4\'bf\'c0\'c7 \'c0\'cc\'b9\'cc\'c1\'f6\'b4\'c2 \'bf\'a9\'b7\'af\'b0\'b3\'c0\'c7 \'b7\'b9\'c0\'cc\'be\'ee\'b7\'ce \'b1\'b8\'bc\'ba\'b5\'c7\'be\'ee \'c0\'d6\'b4\'d9. \'b1\'d7\'c1\'df \'ba\'a3\'c0\'cc\'bd\'ba \'c0\'cc\'b9\'cc\'c1\'f6(OS\'b6\'f3\'b0\'ed \'bb\'fd\'b0\'a2\'c7\'cf\'b8\'e9 \'b5\'ca)\'b4\'c2 \'c0\'cc\'b9\'cc\'c1\'f6\'c0\'c7 \'b1\'e2\'b9\'dd\'c0\'cc \'b5\'c7\'b4\'c2 \'ba\'ce\'ba\'d0\'c0\'cc\'b4\'d9.\
+\
+Volume\
+- COPY\'b4\'c2 \'b7\'ce\'c4\'c3\'bf\'a1\'bc\'ad \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'c2\'ca\'c0\'b8\'b7\'ce \'ba\'b9\'bb\'e7\'b8\'a6 \'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc\'b6\'f3\'b8\'e9 Volume\'c0\'ba \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'bf\'a1\'bc\'ad \'b7\'ce\'c4\'c3 \'c6\'c4\'c0\'cf\'c0\'bb \'c2\'fc\'c1\'b6\'c7\'cf\'b4\'c2 \'b9\'e6\'bd\'c4\'c0\'bb \'c0\'cc\'bf\'eb\'c7\'d4\
+- ex) docker run -p 5000:8080 -v /usr/src/app/node_modules -v $(pwd):/usr/src/app <\'c0\'cc\'b9\'cc\'c1\'f6 \'be\'c6\'c0\'cc\'b5\'f0>\
+- -v /usr/src/app/node_modules: \'c8\'a3\'bd\'ba\'c6\'ae\'bf\'a1 \'c6\'c4\'c0\'cf\'c0\'cc \'be\'f8\'b1\'e2\'b6\'a7\'b9\'ae\'bf\'a1 \'b8\'c5\'c7\'ce\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'bd    \
+- -v $(pwd):/usr/src/app: :\'b8\'a6 \'b0\'e6\'b0\'e8\'b7\'ce \'b8\'c5\'c7\'ce\'c0\'bb \'bd\'c3\'c4\'d1\'c1\'d8\'b4\'d9. (\'b7\'ce\'c4\'c3 \'b0\'e6\'b7\'ce:\'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'b0\'e6\'b7\'ce)\
+\
+\
+
+\f0\b \'b5\'b5\'c4\'bf \'c6\'c4\'c0\'cf \'b1\'b8\'bc\'ba
+\f1\b0 \
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+# \'ba\'a3\'c0\'cc\'bd\'ba \'c0\'cc\'b9\'cc\'c1\'f6\'b8\'a6 \'b8\'ed\'bd\'c3\
+# \'c0\'cc\'b9\'cc\'c1\'f6 \'bb\'fd\'bc\'ba\'bd\'c3 \'b1\'e2\'b9\'dd\'c0\'cc \'b5\'c7\'b4\'c2 \'c0\'cc\'b9\'cc\'c1\'f6 \'b7\'b9\'c0\'cc\'be\'ee\
+# <\'c0\'cc\'b9\'cc\'c1\'f6 \'c0\'cc\'b8\'a7>:<\'c5\'c2\'b1\'d7> \'c7\'fc\'bd\'c4\'c0\'b8\'b7\'ce \'c0\'db\'bc\'ba\
+# \'c5\'c2\'b1\'d7\'b8\'a6 \'ba\'d9\'c0\'cc\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'c0\'da\'b5\'bf\'c0\'b8\'b7\'ce \'b0\'a1\'c0\'e5 \'c3\'d6\'bd\'c5\'c0\'b8\'b7\'ce \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5\
+
+\f0\b FROM
+\f1\b0  baseImage	ex) ubuntu, centos\'a1\'a6\
+\
+# \'c3\'df\'b0\'a1\'c0\'fb\'c0\'b8\'b7\'ce \'c7\'ca\'bf\'e4\'c7\'d1 \'c6\'c4\'c0\'cf\'b5\'e9\'c0\'bb \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5\
+# \'b5\'b5\'c4\'bf\'c0\'cc\'b9\'cc\'c1\'f6\'b0\'a1 \'bb\'fd\'bc\'ba\'b5\'c7\'b1\'e2 \'c0\'fc\'bf\'a1 \'bc\'f6\'c7\'e0\'c7\'d2 \'bd\'a9 \'b8\'ed\'b7\'c9\'be\'ee\
+
+\f0\b RUN
+\f1\b0  command\
+\
+# \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'bd\'c3\'c0\'db\'bd\'c3 \'bd\'c7\'c7\'e0\'b5\'c9 \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'b8\'ed\'bd\'c3\
+# \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b0\'a1 \'bd\'c3\'c0\'db\'b5\'c7\'be\'fa\'c0\'bb \'b6\'a7 \'bd\'c7\'c7\'e0\'c7\'d2 \'bd\'c7\'c7\'e0 \'c6\'c4\'c0\'cf \'b6\'c7\'b4\'c2 \'bd\'a9 \'bd\'ba\'c5\'a9\'b8\'b3\'c6\'ae\
+# \'c7\'d8\'b4\'e7 \'b8\'ed\'b7\'c9\'be\'ee\'b4\'c2 Dockerfile \'b3\'bb 1\'c8\'b8\'b8\'b8 \'be\'b5 \'bc\'f6 \'c0\'d6\'c0\'bd\
+
+\f0\b CMD
+\f1\b0  ["executable"] 	\'a1\'b0echo\'a1\'b1, \'a1\'b0hello\'a1\'b1\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212  \
+
+\f0\b COPY
+\f1\b0 \
+- build\'bf\'a1 \'c7\'ca\'bf\'e4\'c7\'d1 \'c6\'c4\'c0\'cf\'c0\'bb \'c3\'df\'b0\'a1\'c7\'d2 \'bc\'f6 \'c0\'d6\'c0\'bd\
+- ex) COPY package.json ./\
+- COPY\'b4\'c2 \'ba\'af\'c8\'ad\'b0\'a1 \'c0\'fb\'c0\'ba \'c6\'c4\'c0\'cf\'c0\'bb \'b5\'c7\'b5\'b5\'b7\'cf \'b8\'d5\'c0\'fa copy\'c7\'d8\'c1\'d6\'b4\'c2 \'b0\'cd\'c0\'cc \'c1\'c1\'c0\'bd (\'bf\'a9\'b7\'af\'b9\'f8 \'b3\'aa\'b4\'b2\'bc\'ad copy\'b8\'a6 \'bc\'f6\'c7\'e0\'c7\'d8\'bc\'ad \'ba\'f4\'b5\'e5\'c7\'d2 \'b6\'a7 \'c4\'b3\'bd\'c3\'b8\'a6 \'b8\'b9\'c0\'cc \'bb\'e7\'bf\'eb\'c7\'cf\'b5\'b5\'b7\'cf \'c7\'d4)\
+\
+
+\f0\b WORKDIR\
+
+\f1\b0 - \'c0\'cc\'b9\'cc\'c1\'f6 \'be\'c8\'bf\'a1\'bc\'ad \'be\'ee\'c7\'c3\'b8\'ae\'c4\'c9\'c0\'cc\'bc\'c7 \'bc\'d2\'bd\'ba \'c4\'da\'b5\'e5\'b8\'a6 \'b0\'ae\'b0\'ed\'c0\'d6\'c0\'bb \'b5\'f0\'b7\'ba\'c5\'e4\'b8\'ae\'b8\'a6 \'bb\'fd\'bc\'ba
+\f0\b \
+
+\f1\b0 - \'c0\'cc \'b5\'f0\'b7\'ba\'c5\'e4\'b8\'ae\'b0\'a1 working directory\'b0\'a1 \'b5\'c8\'b4\'d9\
+- ex) WORKDIR user/\'a1\'a6
+\f0\b \
 }
