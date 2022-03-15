@@ -4,7 +4,7 @@
 {\*\expandedcolortbl;;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww15360\viewh12200\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww17460\viewh12200\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\b\fs28 \cf0 \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'ba\'d0\'b8\'ae\
@@ -129,6 +129,8 @@ C-group\'b0\'fa \'b3\'d7\'c0\'d3\'bd\'ba\'c6\'e4\'c0\'cc\'bd\'ba\'b4\'c2 \'b8\'a
 - t\'bf\'c9\'bc\'c7\'c0\'bb \'c1\'d6\'b8\'e9 \'c0\'cc\'b9\'cc\'c1\'f6\'bf\'a1 \'c0\'cc\'b8\'a7\'c0\'bb \'ba\'ce\'bf\'a9\'c7\'d2 \'bc\'f6 \'c0\'d6\'c0\'bd\
 	docker build -t <\'b3\'aa\'c0\'c7 \'b5\'b5\'c4\'bf \'be\'c6\'c0\'cc\'b5\'f0> / <\'c0\'fa\'c0\'e5\'bc\'d2/\'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae \'c0\'cc\'b8\'a7> : <\'b9\'f6\'c0\'fc> <\'b5\'b5\'c4\'bf \'c6\'c4\'c0\'cf \'c0\'cc\'b8\'a7>\
 	ex) docker build -t hohoprince/hello:latest .\
+\
+- f \'bf\'c9\'bc\'c7 \'b5\'da\'bf\'a1 \'b5\'b5\'c4\'bf\'c6\'c4\'c0\'cf \'b8\'ed\'c0\'bb \'c0\'d4\'b7\'c2\'c7\'cf\'b8\'e9 \'c0\'d4\'b7\'c2\'c7\'d1 \'b5\'b5\'c4\'bf\'c6\'c4\'c0\'cf\'b7\'ce \'ba\'f4\'b5\'e5\'b8\'a6 \'bd\'c7\'c7\'e0\
 
 \f0\b \
 docker image ls\
@@ -154,6 +156,24 @@ docker volume ls
 \f0\b docker volume rm <volume name>\
 
 \f1\b0 - \'ba\'bc\'b7\'fd \'bb\'e8\'c1\'a6\
+\
+\
+
+\f0\b docker-compose build
+\f1\b0 \
+\'c0\'cc\'b9\'cc\'c1\'f6\'b8\'a6 \'ba\'f4\'b5\'e5\'c7\'cf\'b1\'e2\'b8\'b8 \'c7\'cf\'b0\'ed \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b8\'a6 \'bd\'c3\'c0\'db\'c7\'cf\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9.\
+\
+
+\f0\b docker-compose up
+\f1\b0 \
+- \'c0\'cc\'b9\'cc\'c1\'f6\'b0\'a1 \'c1\'b8\'c0\'e7\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'bb \'b0\'e6\'bf\'ec\'bf\'a1\'b8\'b8 \'ba\'f4\'b5\'e5\'b8\'a6 \'c7\'cf\'b0\'ed \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b8\'a6 \'bd\'c3\'c0\'db\
+- build\'bf\'c9\'bc\'c7\'c0\'ba \'b0\'ad\'c1\'a6\'b7\'ce \'c0\'cc\'b9\'cc\'c1\'f6\'b8\'a6 \'ba\'f4\'b5\'e5\
+- no-build \'c0\'cc\'b9\'cc\'c1\'f6 \'ba\'f4\'b5\'e5 \'be\'f8\'c0\'cc \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b8\'a6 \'bd\'c3\'c0\'db\'c7\'d1\'b4\'d9. (\'c0\'cc\'b9\'cc\'c1\'f6\'b0\'a1 \'be\'f8\'c0\'bb \'b0\'e6\'bf\'ec \'bd\'c7\'c6\'d0)\
+\
+
+\f0\b docker-compose down\
+
+\f1\b0 - \'bd\'c7\'c7\'e0\'c1\'df\'c0\'ce \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b8\'a6 \'c1\'df\'b4\'dc\'bd\'c3\'c5\'b2\'b4\'d9.\
 \
 \
 \
@@ -196,7 +216,8 @@ Volume\
 # \'c5\'c2\'b1\'d7\'b8\'a6 \'ba\'d9\'c0\'cc\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'c0\'da\'b5\'bf\'c0\'b8\'b7\'ce \'b0\'a1\'c0\'e5 \'c3\'d6\'bd\'c5\'c0\'b8\'b7\'ce \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5\
 
 \f0\b FROM
-\f1\b0  baseImage	ex) ubuntu, centos\'a1\'a6\
+\f1\b0  baseImage	ex) ubuntu, centos\'a1\'a6 [as builder] -> \'c0\'cc from \'ba\'ce\'c5\'cd \'b4\'d9\'c0\'bd from \'c0\'fc\'b1\'ee\'c1\'f6\'b4\'c2 \'b8\'f0\'b5\'ce builder stage\'b6\'f3\'b4\'c2 \'b0\'cd\'c0\'bb \'b8\'ed\'bd\'c3 (\'bb\'fd\'b7\'ab \'b0\'a1\'b4\'c9)\
+												\'b4\'d9\'c0\'bd from \'ba\'ce\'c5\'cd\'b4\'c2 run stage\
 \
 # \'c3\'df\'b0\'a1\'c0\'fb\'c0\'b8\'b7\'ce \'c7\'ca\'bf\'e4\'c7\'d1 \'c6\'c4\'c0\'cf\'b5\'e9\'c0\'bb \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5\
 # \'b5\'b5\'c4\'bf\'c0\'cc\'b9\'cc\'c1\'f6\'b0\'a1 \'bb\'fd\'bc\'ba\'b5\'c7\'b1\'e2 \'c0\'fc\'bf\'a1 \'bc\'f6\'c7\'e0\'c7\'d2 \'bd\'a9 \'b8\'ed\'b7\'c9\'be\'ee\
@@ -225,6 +246,25 @@ Volume\
 \f0\b \
 
 \f1\b0 - \'c0\'cc \'b5\'f0\'b7\'ba\'c5\'e4\'b8\'ae\'b0\'a1 working directory\'b0\'a1 \'b5\'c8\'b4\'d9\
-- ex) WORKDIR user/\'a1\'a6
+- ex) WORKDIR user/\'a1\'a6\
+\
+\
+\
+
+\f0\b \'b5\'b5\'c4\'bf \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b0\'a3 \'c5\'eb\'bd\'c5\
+Docker Compose\
+\
+
+\f1\b0 docker-compose.yml \'c6\'c4\'c0\'cf \'c0\'db\'bc\'ba\
+\
+version: "3" -> \'b5\'b5\'c4\'bf \'c4\'c4\'c6\'f7\'c1\'ee\'c0\'c7 \'b9\'f6\'c0\'fc\
+services: -> \'bd\'c7\'c7\'e0\'c7\'cf\'b7\'c1\'b4\'c2 \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'b5\'e9\'c0\'bb \'c1\'a4\'c0\'c7\
+  redis-server: -> \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'c0\'cc\'b8\'a7\
+    image: "redis" -> \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'bf\'a1\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'c0\'cc\'b9\'cc\'c1\'f6\
+  node-app: -> \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'c0\'cc\'b8\'a7\
+    build: . -> \'c7\'f6 \'b5\'f0\'b7\'ba\'c5\'e4\'b8\'ae\'bf\'a1 \'c0\'d6\'b4\'c2 docker\'c6\'c4\'c0\'cf \'bb\'e7\'bf\'eb\
+    ports: -> \'c6\'f7\'c6\'ae \'b8\'ca\'c7\'ce \'b7\'ce\'c4\'c3\'c6\'f7\'c6\'ae:\'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca\'c6\'f7\'c6\'ae\
+      - \'a1\'b05000:8080"\
+
 \f0\b \
 }
